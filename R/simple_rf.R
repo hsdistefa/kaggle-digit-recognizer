@@ -3,7 +3,7 @@ library(readr)
 
 set.seed(0)
 
-numTrain <- 10000
+numTrain <- 42000
 numTrees <- 25
 
 train <- read.csv("../input/train.csv")
@@ -17,4 +17,4 @@ rf <- randomForest(train, labels, xtest=test, ntree=numTrees)
 predictions <- data.frame(ImageId=1:nrow(test), Label=levels(labels)[rf$test$predicted])
 head(predictions)
 
-write_csv(predictions, "rf_benchmark.csv")
+write_csv(predictions, "rf_all_data.csv")
