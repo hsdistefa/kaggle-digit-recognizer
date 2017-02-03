@@ -1,5 +1,8 @@
+input/
+
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-input/
+
+.ipynb_checkpoints/
